@@ -1,0 +1,34 @@
+:root {
+  --lotus-accent: #C4A8E2;
+  --lotus-accent-dim: #8C7AA6;
+  --lotus-accent-dark: #383048;
+  --lotus-text: #D8D0E8;
+  --lotus-text-dim: #887898;
+  --lotus-bg: #141218;
+  --lotus-bg-alt: #1C1A22;
+  --lotus-bg-light: #282430;
+  --lotus-glass: rgba(20, 18, 24, 0.75);
+  --lotus-glass-border: rgba(196, 168, 226, 0.12);
+  --lotus-glass-hover: rgba(196, 168, 226, 0.15);
+
+  --color-light: var(--lotus-bg-light);
+  --color-dark: var(--lotus-bg-alt);
+  --color-darker: var(--lotus-bg);
+  --color-darkest: #0e0c12;
+  --scrollbar: var(--lotus-accent-dark);
+  --white: var(--lotus-text);
+  --darkerwhite: var(--lotus-text-dim);
+  --darkwhite: var(--lotus-text);
+  --grey: var(--lotus-bg-light);
+  --lightgrey: var(--lotus-accent-dark);
+  --lightergrey: var(--lotus-bg-light);
+  --grey-ish: var(--lotus-accent-dark);
+  --darkergrey: var(--lotus-bg);
+  --thegrey: var(--lotus-bg-alt);
+  --darkgrey: var(--lotus-bg-alt);
+  --begrey: var(--lotus-bg-light);
+  --littlegrey: var(--lotus-bg-light);
+  --black: #000000;
+  --blacker: var(--lotus-bg);
+  --blacker-ish: var(--lotus-bg-alt);
+}

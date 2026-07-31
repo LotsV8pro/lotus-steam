@@ -1,183 +1,184 @@
-:root {
-  --lotus-accent: #C4A8E2;
-  --lotus-accent-dim: #8C7AA6;
-  --lotus-accent-dark: #383048;
-  --lotus-text: #D8D0E8;
-  --lotus-text-dim: #887898;
-  --lotus-bg: #141218;
-  --lotus-bg-alt: #1C1A22;
-  --lotus-bg-light: #282430;
-  --lotus-glass: rgba(20, 18, 24, 0.75);
-}
+@import url(colors.css);
 
-body {
-  --main-color: var(--lotus-accent) !important;
-}
-
-.root, .app-portal {
-  background: var(--lotus-bg) !important;
-}
-
-.libraryhome, .appdetails, .library {
-  background: var(--lotus-bg) !important;
-}
-
-.appdetailsheader, .libraryheader {
-  background: var(--lotus-glass) !important;
-  backdrop-filter: blur(16px) !important;
-  border-bottom: 1px solid rgba(196, 168, 226, 0.1) !important;
-}
-
-.sidebar, .gameslist {
-  background: var(--lotus-bg-alt) !important;
-}
-
-.gamelistitem {
-  background: transparent !important;
-  transition: all 0.2s ease !important;
-}
-
-.gamelistitem:hover, .gamelistitem.FocusWithin {
-  background: var(--lotus-bg-light) !important;
-  border-left: 2px solid var(--lotus-accent) !important;
-}
-
-.gamelistitem.Selected {
-  background: rgba(196, 168, 226, 0.1) !important;
-  border-left: 2px solid var(--lotus-accent) !important;
-}
-
-.title, .appname, .text {
-  color: var(--lotus-text) !important;
-}
-
-.secondarytext, .subtext {
-  color: var(--lotus-text-dim) !important;
-}
-
-button, .button, .btn {
-  background: var(--lotus-bg-light) !important;
-  color: var(--lotus-text) !important;
-  border: 1px solid rgba(196, 168, 226, 0.2) !important;
-  border-radius: 8px !important;
-  transition: all 0.2s ease !important;
-}
-
-button:hover, .button:hover {
-  background: rgba(196, 168, 226, 0.15) !important;
-  border-color: var(--lotus-accent) !important;
-}
-
-.btn_primary, .button.primary {
-  background: rgba(196, 168, 226, 0.2) !important;
-  border-color: var(--lotus-accent) !important;
-}
-
-.btn_primary:hover {
-  background: rgba(196, 168, 226, 0.35) !important;
-}
-
-input, .input, .textinput {
-  background: var(--lotus-bg-light) !important;
-  color: var(--lotus-text) !important;
-  border: 1px solid rgba(196, 168, 226, 0.15) !important;
-  border-radius: 6px !important;
-}
-
-input:focus {
-  border-color: var(--lotus-accent) !important;
-  box-shadow: 0 0 0 2px rgba(196, 168, 226, 0.2) !important;
-}
-
+/* === SCROLLBARS === */
 ::-webkit-scrollbar {
+  background: transparent !important;
   width: 8px !important;
 }
-
 ::-webkit-scrollbar-track {
   background: transparent !important;
 }
-
 ::-webkit-scrollbar-thumb {
   background: var(--lotus-accent-dark) !important;
   border-radius: 4px !important;
 }
-
 ::-webkit-scrollbar-thumb:hover {
   background: var(--lotus-accent-dim) !important;
 }
 
-.contextmenu, .popup {
-  background: var(--lotus-bg-alt) !important;
-  border: 1px solid rgba(196, 168, 226, 0.15) !important;
-  border-radius: 8px !important;
-  backdrop-filter: blur(20px) !important;
+/* === BASE === */
+.DesktopUI {
+  background: var(--lotus-bg) !important;
 }
 
-.contextmenuitem:hover {
-  background: rgba(196, 168, 226, 0.12) !important;
+/* === DIALOGS === */
+.DialogContent {
+  background: var(--lotus-bg) !important;
 }
 
-.progressbar, .progress {
-  background: var(--lotus-bg-light) !important;
+.DialogBody, .DialogInnerBody {
+  background: var(--lotus-bg) !important;
 }
 
-.progressbar_fill {
-  background: linear-gradient(135deg, var(--lotus-accent), var(--lotus-accent-dim)) !important;
-}
-
-.tab, .tabheader {
-  color: var(--lotus-text-dim) !important;
-}
-
-.tab.active, .tab:hover {
-  color: var(--lotus-accent) !important;
-}
-
-.toast, .notification {
+.DialogHeader {
   background: var(--lotus-glass) !important;
   backdrop-filter: blur(16px) !important;
-  border: 1px solid rgba(196, 168, 226, 0.2) !important;
-  border-radius: 10px !important;
+  border-bottom: 1px solid var(--lotus-glass-border) !important;
 }
 
-.avatar, .usericon {
-  border: 2px solid rgba(196, 168, 226, 0.3) !important;
+.DialogFooter {
+  background: var(--lotus-bg-alt) !important;
+  border-top: 1px solid var(--lotus-glass-border) !important;
 }
 
-.onlineindicator {
-  background: var(--lotus-accent) !important;
-}
-
-.card, .panel {
-  background: var(--lotus-bg-light) !important;
-  border: 1px solid rgba(196, 168, 226, 0.08) !important;
-  border-radius: 10px !important;
-  transition: all 0.2s ease !important;
-}
-
-.card:hover {
-  border-color: rgba(196, 168, 226, 0.25) !important;
-  box-shadow: 0 4px 20px rgba(196, 168, 226, 0.08) !important;
-}
-
-.dropdown {
+.DialogButton {
   background: var(--lotus-bg-light) !important;
   color: var(--lotus-text) !important;
-  border: 1px solid rgba(196, 168, 226, 0.15) !important;
+  border: 1px solid var(--lotus-glass-border) !important;
+  border-radius: 6px !important;
+  transition: all 0.15s ease !important;
+}
+
+.DialogButton:hover {
+  background: var(--lotus-glass-hover) !important;
+  border-color: var(--lotus-accent) !important;
+}
+
+.DialogButton.Primary {
+  background: rgba(196, 168, 226, 0.2) !important;
+}
+
+.DialogButton.Primary:hover {
+  background: rgba(196, 168, 226, 0.35) !important;
+}
+
+.DialogLabel, .DialogLabelStrong, .DialogBodyText {
+  color: var(--lotus-text) !important;
+}
+
+.DialogInput {
+  background: var(--lotus-bg-light) !important;
+  color: var(--lotus-text) !important;
+  border: 1px solid var(--lotus-glass-border) !important;
   border-radius: 6px !important;
 }
 
-.settingssidebar {
-  background: var(--lotus-bg-alt) !important;
+.DialogInput:focus {
+  border-color: var(--lotus-accent) !important;
+  box-shadow: 0 0 0 2px rgba(196, 168, 226, 0.2) !important;
 }
 
-.dialog, .modal {
+.DialogDropDown {
+  background: var(--lotus-bg-light) !important;
+  color: var(--lotus-text) !important;
+  border: 1px solid var(--lotus-glass-border) !important;
+  border-radius: 6px !important;
+}
+
+.DialogCheckbox {
+  border-color: var(--lotus-accent-dim) !important;
+}
+
+.DialogCheckbox:hover {
+  border-color: var(--lotus-accent) !important;
+}
+
+.DialogSlider_Slider {
+  background: var(--lotus-bg-light) !important;
+}
+
+.DialogSlider_Grabber {
+  background: var(--lotus-accent) !important;
+}
+
+.DialogSlider_Value {
+  color: var(--lotus-text) !important;
+}
+
+/* === MODALS === */
+.ModalDialogPopup {
   background: var(--lotus-glass) !important;
   backdrop-filter: blur(24px) !important;
-  border: 1px solid rgba(196, 168, 226, 0.15) !important;
-  border-radius: 12px !important;
+  border: 1px solid var(--lotus-glass-border) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
 }
 
-.dialogheader {
-  border-bottom: 1px solid rgba(196, 168, 226, 0.1) !important;
+.ModalDialogBody {
+  background: transparent !important;
+}
+
+.ModalOverlayBackground {
+  background: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* === CONTEXT MENUS === */
+.PP7LM0Ow1K5qkR8WElLpt {
+  background: var(--lotus-glass) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid var(--lotus-glass-border) !important;
+  border-radius: 8px !important;
+}
+
+._1n7Wloe5jZ6fSuvV18NNWI {
+  color: var(--lotus-text) !important;
+}
+
+._1n7Wloe5jZ6fSuvV18NNWI:hover {
+  background: var(--lotus-glass-hover) !important;
+  color: var(--lotus-accent) !important;
+}
+
+/* === FRIENDS LIST === */
+.friendListHeaderContainer {
+  background: var(--lotus-glass) !important;
+  backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid var(--lotus-glass-border) !important;
+}
+
+.friendlistListContainer {
+  background: var(--lotus-bg) !important;
+}
+
+.friendsListSectionTitle {
+  background: var(--lotus-bg-light) !important;
+  color: var(--lotus-accent) !important;
+}
+
+.friend.offline {
+  opacity: 0.5;
+}
+
+/* === TITLE BAR === */
+.TitleBar {
+  background: var(--lotus-bg-alt) !important;
+  border-bottom: 1px solid var(--lotus-glass-border) !important;
+}
+
+.title-area-icon {
+  color: var(--lotus-text-dim) !important;
+}
+
+.title-area-icon:hover {
+  background: var(--lotus-bg-light) !important;
+  color: var(--lotus-text) !important;
+}
+
+/* === TOOLTIPS === */
+[class*="Tooltip"] {
+  background: var(--lotus-glass) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid var(--lotus-glass-border) !important;
+  color: var(--lotus-text) !important;
+  border-radius: 6px !important;
 }

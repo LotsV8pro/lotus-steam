@@ -1,64 +1,47 @@
-:root {
-  --lotus-accent: #C4A8E2;
-  --lotus-accent-dim: #8C7AA6;
-  --lotus-accent-dark: #383048;
-  --lotus-text: #D8D0E8;
-  --lotus-text-dim: #887898;
-  --lotus-bg: #141218;
-  --lotus-bg-alt: #1C1A22;
-  --lotus-bg-light: #282430;
-  --lotus-glass: rgba(20, 18, 24, 0.75);
+@import url(colors.css);
+
+.friendListHeaderContainer {
+  background: var(--lotus-glass) !important;
+  backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid var(--lotus-glass-border) !important;
 }
 
-.main, .friendslist, .chatmain {
+.friendlistListContainer {
   background: var(--lotus-bg) !important;
 }
 
-.friendslistheader, .chatheader {
-  background: var(--lotus-glass) !important;
-  backdrop-filter: blur(16px) !important;
-  border-bottom: 1px solid rgba(196, 168, 226, 0.1) !important;
-}
-
-.frienditem {
-  background: transparent !important;
-  transition: all 0.2s ease !important;
-}
-
-.frienditem:hover {
+.friendsListSectionTitle {
   background: var(--lotus-bg-light) !important;
-}
-
-.frienditem.selected {
-  background: rgba(196, 168, 226, 0.1) !important;
-}
-
-.chatmessage {
-  background: var(--lotus-bg-light) !important;
-  border-radius: 8px !important;
-  padding: 8px 12px !important;
-  margin: 4px 0 !important;
-}
-
-.chatmessage.mine {
-  background: rgba(196, 168, 226, 0.1) !important;
-}
-
-.chatinput {
-  background: var(--lotus-bg-light) !important;
-  border: 1px solid rgba(196, 168, 226, 0.15) !important;
-  border-radius: 8px !important;
-  color: var(--lotus-text) !important;
-}
-
-.chatinput:focus {
-  border-color: var(--lotus-accent) !important;
-}
-
-.username {
   color: var(--lotus-accent) !important;
 }
 
-.userstatus {
-  color: var(--lotus-text-dim) !important;
+.friend.offline {
+  opacity: 0.5;
+}
+
+.friend.quickAccessFriend .avatarHolder .avatar {
+  border: 1px solid var(--lotus-accent-dark) !important;
+  border-radius: 6px !important;
+}
+
+.window_resize_grip {
+  height: 0px !important;
+  width: 0px !important;
+}
+
+.friendListFooter {
+  display: none !important;
+}
+
+.FriendsListContent .friendlistListContainer .friendGroup.onlineFriends {
+  border-top: 1px solid var(--lotus-glass-border) !important;
+}
+
+.ingame .r62qzcdJQ0qezZglOtiUX {
+  color: var(--lotus-accent) !important;
+}
+
+.friendStatusHover.ingame:hover,
+.friendStatusHover.ingame.Friend_ContextMenuActive {
+  background-color: var(--lotus-bg-light) !important;
 }
