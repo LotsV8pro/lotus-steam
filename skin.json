@@ -1,0 +1,21 @@
+{
+    "name": "Lotus Purple",
+    "author": "LotsV8pro",
+    "description": "Purple Glassmorphism Theme for Steam",
+
+    "github": {
+        "owner": "LotsV8pro",
+        "repo_name": "lotus-steam"
+    },
+    "header_image": "https://placehold.co/600x200/C4A8E2/141218?text=Lotus+Steam",
+    "splash_image": "https://placehold.co/1200x600/141218/C4A8E2?text=Lotus+Steam",
+    "tags": [
+        "Purple",
+        "Glassmorphism",
+        "Dark"
+    ],
+    "version": "1.0.0",
+
+    "Steam-WebKit": "webkit.css",
+    "UseDefaultPatches": true
+}

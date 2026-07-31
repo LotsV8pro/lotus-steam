@@ -1,0 +1,35 @@
+:root {
+  --lotus-accent: #C4A8E2;
+  --lotus-accent-dim: #8C7AA6;
+  --lotus-text: #D8D0E8;
+  --lotus-bg: #141218;
+  --lotus-glass: rgba(20, 18, 24, 0.75);
+}
+
+.bpm_background, .bpm_main {
+  background: var(--lotus-bg) !important;
+}
+
+.bpm_header {
+  background: var(--lotus-glass) !important;
+  backdrop-filter: blur(16px) !important;
+}
+
+.bpm_tile {
+  background: var(--lotus-bg) !important;
+  border: 1px solid rgba(196, 168, 226, 0.1) !important;
+  border-radius: 12px !important;
+}
+
+.bpm_tile:hover {
+  border-color: var(--lotus-accent) !important;
+  box-shadow: 0 0 20px rgba(196, 168, 226, 0.15) !important;
+}
+
+.bpm_text {
+  color: var(--lotus-text) !important;
+}
+
+.bpm_secondary {
+  color: var(--lotus-accent-dim) !important;
+}
